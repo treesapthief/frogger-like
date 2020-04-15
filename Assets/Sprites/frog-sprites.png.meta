@@ -73,52 +73,52 @@ TextureImporter:
     second: frog-sprites_22
   - first:
       213: 41257280433312006
-    second: frog-sprites_23
+    second: lilypad
   - first:
       213: 7222564500653337470
-    second: frog-sprites_24
+    second: fly
   - first:
       213: 7986219687300401757
-    second: frog-sprites_25
+    second: grass
   - first:
       213: 1207890369131530857
-    second: frog-sprites_26
+    second: water
   - first:
       213: 5837686559002140265
-    second: frog-sprites_27
+    second: road
   - first:
       213: -1886112749435699931
-    second: frog-sprites_28
+    second: end_bush
   - first:
       213: 428257720452272293
-    second: frog-sprites_29
+    second: end_lily_pad
   - first:
       213: 5325888788283589694
-    second: frog-sprites_30
+    second: log_large
   - first:
       213: -2945324081381054198
-    second: frog-sprites_31
+    second: log_small
   - first:
       213: 9179307798140255
-    second: frog-sprites_32
+    second: log_medium
   - first:
       213: -3674023245210223053
     second: frog_death
   - first:
       213: -4073616695710320063
-    second: frog-sprites_34
+    second: vehicle_2
   - first:
       213: -5393423222864039953
-    second: frog-sprites_35
+    second: vehicle_1
   - first:
       213: -2988586052969970400
-    second: frog-sprites_36
+    second: vehicle_3
   - first:
       213: 875527040801558334
-    second: frog-sprites_37
+    second: vehicle_4
   - first:
       213: -6136913649447841533
-    second: frog-sprites_38
+    second: vehicle_5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -522,33 +522,12 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: frog-sprites_14
-      rect:
-        serializedVersion: 2
-        x: 380
-        y: 457
-        width: 11
-        height: 8
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9d63a9143090402c0800000000000000
-      internalID: -4466435020854511911
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: turtle_dive_1
       rect:
         serializedVersion: 2
-        x: 381
+        x: 378
         y: 419
-        width: 61
+        width: 64
         height: 50
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -585,34 +564,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: frog-sprites_17
-      rect:
-        serializedVersion: 2
-        x: 530
-        y: 455
-        width: 8
-        height: 4
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: dcf08caeb9f841010800000000000000
-      internalID: 1158708903962742733
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: turtle_dive_3
       rect:
         serializedVersion: 2
         x: 517
         y: 431
         width: 36
-        height: 26
+        height: 28
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -627,34 +585,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: frog-sprites_19
-      rect:
-        serializedVersion: 2
-        x: 572
-        y: 453
-        width: 5
-        height: 4
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 978f5857498305010800000000000000
-      internalID: 1175501713021728889
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: turtle_dive_4
       rect:
         serializedVersion: 2
-        x: 576
+        x: 570
         y: 437
-        width: 20
-        height: 18
+        width: 19
+        height: 19
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -669,49 +606,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: frog-sprites_21
-      rect:
-        serializedVersion: 2
-        x: 377
-        y: 436
-        width: 4
-        height: 9
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 773b80af2313dc3e0800000000000000
-      internalID: -2031913761861225609
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: frog-sprites_22
-      rect:
-        serializedVersion: 2
-        x: 570
-        y: 440
-        width: 8
-        height: 12
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bb17a46baab4d4a30800000000000000
-      internalID: 4201097223981396411
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: frog-sprites_23
+      name: lilypad
       rect:
         serializedVersion: 2
         x: 6
@@ -732,7 +627,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: frog-sprites_24
+      name: fly
       rect:
         serializedVersion: 2
         x: 84
@@ -753,7 +648,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: frog-sprites_25
+      name: grass
       rect:
         serializedVersion: 2
         x: 135
@@ -774,7 +669,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: frog-sprites_26
+      name: water
       rect:
         serializedVersion: 2
         x: 226
@@ -795,7 +690,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: frog-sprites_27
+      name: road
       rect:
         serializedVersion: 2
         x: 316
@@ -816,7 +711,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: frog-sprites_28
+      name: end_bush
       rect:
         serializedVersion: 2
         x: 407
@@ -837,7 +732,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: frog-sprites_29
+      name: end_lily_pad
       rect:
         serializedVersion: 2
         x: 497
@@ -858,7 +753,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: frog-sprites_30
+      name: log_large
       rect:
         serializedVersion: 2
         x: 13
@@ -879,7 +774,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: frog-sprites_31
+      name: log_small
       rect:
         serializedVersion: 2
         x: 387
@@ -900,7 +795,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: frog-sprites_32
+      name: log_medium
       rect:
         serializedVersion: 2
         x: 14
@@ -942,7 +837,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: frog-sprites_34
+      name: vehicle_2
       rect:
         serializedVersion: 2
         x: 9
@@ -963,7 +858,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: frog-sprites_35
+      name: vehicle_1
       rect:
         serializedVersion: 2
         x: 203
@@ -984,7 +879,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: frog-sprites_36
+      name: vehicle_3
       rect:
         serializedVersion: 2
         x: 12
@@ -1005,7 +900,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: frog-sprites_37
+      name: vehicle_4
       rect:
         serializedVersion: 2
         x: 155
@@ -1026,7 +921,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: frog-sprites_38
+      name: vehicle_5
       rect:
         serializedVersion: 2
         x: 305
