@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CollectibleItem : MonoBehaviour
+public class PlayerSquishable : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -18,6 +18,13 @@ public class CollectibleItem : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collider)
     {
-        Debug.Log("Collectible item triggered");
+        if (collider.gameObject.tag == "Player")
+        {
+            Debug.Log("Collided with player");
+        }
+        else
+        {
+            Debug.Log("Collided with anything, except the player.");
+        }
     }
 }

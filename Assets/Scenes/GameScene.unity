@@ -131,6 +131,8 @@ GameObject:
   m_Component:
   - component: {fileID: 14314994}
   - component: {fileID: 14314993}
+  - component: {fileID: 14314995}
+  - component: {fileID: 14314996}
   m_Layer: 0
   m_Name: FrogCollectible (3)
   m_TagString: Untagged
@@ -203,6 +205,44 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &14314995
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 14314992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e844ea67ee230ca47a60ebc6476b28ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!61 &14314996
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 14314992}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.8125, y: 0.578125}
+    newSize: {x: 0.8125, y: 0.578125}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.8125, y: 0.578125}
+  m_EdgeRadius: 0
 --- !u!1 &70087536
 GameObject:
   m_ObjectHideFlags: 0
@@ -424,6 +464,7 @@ GameObject:
   - component: {fileID: 396724016}
   - component: {fileID: 396724018}
   - component: {fileID: 396724017}
+  - component: {fileID: 396724019}
   m_Layer: 0
   m_Name: Semi
   m_TagString: Untagged
@@ -540,7 +581,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -556,6 +597,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 4.453125, y: 1.03125}
   m_EdgeRadius: 0
+--- !u!114 &396724019
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 396724013}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edd1ca3d99e4d0e4088c8bce5a0ca109, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &564863495
 GameObject:
   m_ObjectHideFlags: 0
@@ -569,6 +622,7 @@ GameObject:
   - component: {fileID: 564863500}
   - component: {fileID: 564863499}
   - component: {fileID: 564863498}
+  - component: {fileID: 564863501}
   m_Layer: 0
   m_Name: SportsCar
   m_TagString: Untagged
@@ -672,7 +726,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -701,6 +755,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 4
+--- !u!114 &564863501
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 564863495}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edd1ca3d99e4d0e4088c8bce5a0ca109, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &643952516
 GameObject:
   m_ObjectHideFlags: 0
@@ -806,6 +872,8 @@ GameObject:
   m_Component:
   - component: {fileID: 667572534}
   - component: {fileID: 667572533}
+  - component: {fileID: 667572535}
+  - component: {fileID: 667572536}
   m_Layer: 0
   m_Name: FrogCollectible
   m_TagString: Untagged
@@ -878,6 +946,44 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &667572535
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 667572532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e844ea67ee230ca47a60ebc6476b28ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!61 &667572536
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 667572532}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.8125, y: 0.578125}
+    newSize: {x: 0.8125, y: 0.578125}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.8125, y: 0.578125}
+  m_EdgeRadius: 0
 --- !u!1 &752078689
 GameObject:
   m_ObjectHideFlags: 0
@@ -3017,6 +3123,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1370501029}
   - component: {fileID: 1370501028}
+  - component: {fileID: 1370501030}
+  - component: {fileID: 1370501031}
   m_Layer: 0
   m_Name: FrogCollectible (1)
   m_TagString: Untagged
@@ -3089,6 +3197,44 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1370501030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1370501027}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e844ea67ee230ca47a60ebc6476b28ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!61 &1370501031
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1370501027}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.8125, y: 0.578125}
+    newSize: {x: 0.8125, y: 0.578125}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.8125, y: 0.578125}
+  m_EdgeRadius: 0
 --- !u!1 &1432714601
 GameObject:
   m_ObjectHideFlags: 0
@@ -3329,6 +3475,7 @@ GameObject:
   - component: {fileID: 1660956281}
   - component: {fileID: 1660956282}
   - component: {fileID: 1660956283}
+  - component: {fileID: 1660956284}
   m_Layer: 0
   m_Name: Car
   m_TagString: Untagged
@@ -3444,7 +3591,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -3460,6 +3607,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.109375, y: 1.109375}
   m_EdgeRadius: 0
+--- !u!114 &1660956284
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1660956278}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edd1ca3d99e4d0e4088c8bce5a0ca109, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1837441907
 GameObject:
   m_ObjectHideFlags: 0
@@ -3618,6 +3777,7 @@ GameObject:
   - component: {fileID: 1987210256}
   - component: {fileID: 1987210258}
   - component: {fileID: 1987210257}
+  - component: {fileID: 1987210259}
   m_Layer: 0
   m_Name: Truck
   m_TagString: Untagged
@@ -3734,7 +3894,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -3750,6 +3910,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.78125, y: 1.03125}
   m_EdgeRadius: 0
+--- !u!114 &1987210259
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1987210253}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edd1ca3d99e4d0e4088c8bce5a0ca109, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1987731571
 GameObject:
   m_ObjectHideFlags: 0
@@ -3842,6 +4014,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2032808237}
   - component: {fileID: 2032808236}
+  - component: {fileID: 2032808238}
+  - component: {fileID: 2032808239}
   m_Layer: 0
   m_Name: FrogCollectible (4)
   m_TagString: Untagged
@@ -3914,6 +4088,44 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2032808238
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2032808235}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e844ea67ee230ca47a60ebc6476b28ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!61 &2032808239
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2032808235}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.8125, y: 0.578125}
+    newSize: {x: 0.8125, y: 0.578125}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.8125, y: 0.578125}
+  m_EdgeRadius: 0
 --- !u!1 &2064266067
 GameObject:
   m_ObjectHideFlags: 0
@@ -4006,6 +4218,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2100559635}
   - component: {fileID: 2100559634}
+  - component: {fileID: 2100559636}
+  - component: {fileID: 2100559637}
   m_Layer: 0
   m_Name: FrogCollectible (2)
   m_TagString: Untagged
@@ -4078,6 +4292,44 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2100559636
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2100559633}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e844ea67ee230ca47a60ebc6476b28ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!61 &2100559637
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2100559633}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.8125, y: 0.578125}
+    newSize: {x: 0.8125, y: 0.578125}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.8125, y: 0.578125}
+  m_EdgeRadius: 0
 --- !u!1 &2104181671
 GameObject:
   m_ObjectHideFlags: 0
