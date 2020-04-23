@@ -15,4 +15,12 @@ public class PlayerDrownable : MonoBehaviour
     {
         
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Water" && transform.parent != null && transform.parent.tag == "")
+        {
+            Debug.Log("Player hit water");
+        }
+    }
 }
