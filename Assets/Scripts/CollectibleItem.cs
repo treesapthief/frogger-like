@@ -16,7 +16,7 @@ public class CollectibleItem : MonoBehaviour
         
     }
 
-    void OnTriggerEnter2D(Collider2D collider)
+    void OnTriggerEnter2D(Collider2D collision)
     {
         Debug.Log("Collectible item triggered");
     }

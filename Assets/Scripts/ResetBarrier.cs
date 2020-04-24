@@ -16,9 +16,9 @@ public class ResetBarrier : MonoBehaviour
         
     }
 
-    void OnTriggerEnter2D(Collider2D collider)
+    void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collider.gameObject.TryGetComponent<MovingObstacle>(out var movingObstacle))
+        if (collision.gameObject.TryGetComponent<MovingObstacle>(out var movingObstacle))
         {
             movingObstacle.ResetPosition();
         }
