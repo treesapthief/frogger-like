@@ -15,4 +15,12 @@ public class ResetBarrier : MonoBehaviour
     {
         
     }
+
+    void OnTriggerEnter2D(Collider2D collider)
+    {
+        if (collider.gameObject.TryGetComponent<MovingObstacle>(out var movingObstacle))
+        {
+            movingObstacle.ResetPosition();
+        }
+    }
 }
