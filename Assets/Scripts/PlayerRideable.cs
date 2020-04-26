@@ -69,7 +69,8 @@ public class PlayerRideable : MonoBehaviour
             gameObject.transform.parent = null;
             var playerRigidBody = GetComponent<Rigidbody2D>();
             playerRigidBody.velocity = Vector3.zero;
-            // TODO: Remove parent from Player gameobject
+
+            // TODO: Reset player's position closest to the nearest 0.5 (as that is where it is set on the tiles
         }
     }
 }
