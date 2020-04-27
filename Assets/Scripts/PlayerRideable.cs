@@ -1,26 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
-public static class UtilityExtensions
-{
-    public static T[] GetComponentsOnlyInChildren<T>(this Component script) where T : class
-    {
-        List<T> group = new List<T>();
-
-        //collect only if its an interface or a Component
-        if (typeof(T).IsInterface
-            || typeof(T).IsSubclassOf(typeof(Component))
-            || typeof(T) == typeof(Component))
-        {
-            foreach (Transform child in script.transform)
-            {
-                group.AddRange(child.GetComponentsInChildren<T>());
-            }
-        }
-
-        return group.ToArray();
-    }
-}
 
 public class PlayerRideable : MonoBehaviour
 {
@@ -43,14 +23,19 @@ public class PlayerRideable : MonoBehaviour
             var playerRigidBody = GetComponent<Rigidbody2D>();
             var parentRigidBody = platform.gameObject.GetComponent<Rigidbody2D>();
             var playerPosition = gameObject.transform.position;
-            var children = platform.GetComponentsOnlyInChildren<Transform>().ToList();
-            if (children.Any())
-            {
-                Debug.Log("Choose a side");
-                var newDistance = children.Select(x => x.position).OrderBy(c => Vector3.Distance(c, playerPosition)).FirstOrDefault();
-                Debug.Log($"Player: {playerPosition}, New Distance {newDistance}");
-                gameObject.transform.position = new Vector3(newDistance.x, playerPosition.y, 0);
-            }
+            var length = platform.bounds.size.x;
+
+            // TODO: turtle position, is 0,0, and length is 2, 3 or 4.
+            // Take the player position - turtle position, and round to the nearest number under "length"
+            // That should be the place to land
+
+            //if (children.Any())
+            //{
+            //    Debug.Log("Choose a side");
+            //    var newDistance = children.Select(x => x.position).OrderBy(c => Vector3.Distance(c, playerPosition)).FirstOrDefault();
+            //    Debug.Log($"Player: {playerPosition}, New Distance {newDistance}");
+            //    gameObject.transform.position = new Vector3(newDistance.x, playerPosition.y, 0);
+            //}
 
             // TODO: Set player to correct "tile" on the turtle
             // Check player's position to the turtle's position (and length)
