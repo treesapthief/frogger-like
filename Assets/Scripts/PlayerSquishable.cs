@@ -24,7 +24,7 @@ public class PlayerSquishable : MonoBehaviour
         }
         else
         {
-            Debug.Log("Collided with anything, except the player.");
+            //Debug.Log("Collided with anything, except the player.");
         }
     }
 }

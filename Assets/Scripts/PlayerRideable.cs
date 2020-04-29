@@ -1,9 +1,10 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class PlayerRideable : MonoBehaviour
 {
+    [Range(0f, 1f)]
+    public float PlayerLandingOffset = 0.5f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,27 +23,23 @@ public class PlayerRideable : MonoBehaviour
             Debug.Log("Player landed on ride-able object");
             var playerRigidBody = GetComponent<Rigidbody2D>();
             var parentRigidBody = platform.gameObject.GetComponent<Rigidbody2D>();
+
             var playerPosition = gameObject.transform.position;
+            var platformPosition = platform.transform.position;
+
+            var spot = Mathf.Round(playerPosition.x - platformPosition.x);
             var length = platform.bounds.size.x;
+            if (spot > length)
+            {
+                Debug.Log("Frog is no longer on the Rideable");
+                // Any farther, the frog is in the water
+                return;
+            }
 
-            // TODO: turtle position, is 0,0, and length is 2, 3 or 4.
-            // Take the player position - turtle position, and round to the nearest number under "length"
-            // That should be the place to land
-
-            //if (children.Any())
-            //{
-            //    Debug.Log("Choose a side");
-            //    var newDistance = children.Select(x => x.position).OrderBy(c => Vector3.Distance(c, playerPosition)).FirstOrDefault();
-            //    Debug.Log($"Player: {playerPosition}, New Distance {newDistance}");
-            //    gameObject.transform.position = new Vector3(newDistance.x, playerPosition.y, 0);
-            //}
-
-            // TODO: Set player to correct "tile" on the turtle
-            // Check player's position to the turtle's position (and length)
-            // Determine if they are on the left or the right
             playerRigidBody.velocity = parentRigidBody.velocity;
+            gameObject.transform.position = new Vector3(platformPosition.x + spot, platformPosition.y, 0);
             gameObject.transform.parent = platform.transform;
-            // TODO: player can move left and right on grid of log
+            Debug.Log("Set player onto the Rideable");
         }
     }
 
@@ -55,7 +52,10 @@ public class PlayerRideable : MonoBehaviour
             var playerRigidBody = GetComponent<Rigidbody2D>();
             playerRigidBody.velocity = Vector3.zero;
 
-            // TODO: Reset player's position closest to the nearest 0.5 (as that is where it is set on the tiles
+            var playerPosition = gameObject.transform.position;
+            var newX = Mathf.Round(playerPosition.x - PlayerLandingOffset) + PlayerLandingOffset;
+
+            gameObject.transform.position = new Vector3(newX, playerPosition.y, 0);
         }
     }
 }
