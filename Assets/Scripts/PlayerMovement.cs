@@ -11,6 +11,7 @@ public enum FacingDirection
 public class PlayerMovement : MonoBehaviour
 {
     public FacingDirection FacingDirection = FacingDirection.North;
+    public Transform PlayerStartingPosition;
 
     void Start()
     {
@@ -44,5 +45,10 @@ public class PlayerMovement : MonoBehaviour
             FacingDirection = FacingDirection.East;
             transform.localEulerAngles = new Vector3(0, 0, 90);
         }
+    }
+
+    public void ResetPosition()
+    {
+        transform.position = PlayerStartingPosition.position;
     }
 }

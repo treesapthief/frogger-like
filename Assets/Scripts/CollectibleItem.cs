@@ -16,8 +16,12 @@ public class CollectibleItem : MonoBehaviour
         
     }
 
-    void OnTriggerEnter2D(Collider2D collision)
+    void OnTriggerEnter2D(Collider2D other)
     {
         Debug.Log("Collectible item triggered");
+        if (other.gameObject.TryGetComponent<PlayerMovement>(out var player))
+        {
+            player.ResetPosition();
+        }
     }
 }
