@@ -8,7 +8,18 @@ public class PlayerRideable : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        GameManager.Instance.OnStateChange += OnStateChange;
+    }
+
+    private void OnStateChange(GameState newState)
+    {
+        // To make sure the player is not attached to anything when they lose a life or the game is over
+        if (newState == GameState.GameOver || newState == GameState.PlayerDied)
+        {
+            gameObject.transform.parent = null;
+            var playerRigidBody = GetComponent<Rigidbody2D>();
+            playerRigidBody.velocity = Vector3.zero;
+        }
     }
 
     // Update is called once per frame
@@ -18,6 +29,11 @@ public class PlayerRideable : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D platform)
     {
+        if (GameManager.Instance.GameState != GameState.InGame)
+        {
+            return;
+        }
+
         if (platform.gameObject.tag == "Rideable" && gameObject.transform.parent == null)
         {
             Debug.Log("Player landed on ride-able object");
@@ -45,6 +61,11 @@ public class PlayerRideable : MonoBehaviour
 
     void OnTriggerExit2D(Collider2D platform)
     {
+        if (GameManager.Instance.GameState != GameState.InGame)
+        {
+            return;
+        }
+
         if (platform.gameObject.tag == "Rideable" && gameObject.transform.parent != null)
         {
             Debug.Log("Player left ride-able object");

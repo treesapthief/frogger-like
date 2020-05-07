@@ -41,14 +41,14 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (GameState == GameState.GameOver && Input.anyKeyDown)
-        {
-            SetGameState(GameState.InGame);
-        }
-        else if (GameState == GameState.PlayerDied && Input.anyKeyDown)
-        {
-            SetGameState(GameState.InGame);
-        }
+        //if (GameState == GameState.GameOver && Input.anyKeyDown)
+        //{
+        //    SetGameState(GameState.InGame);
+        //}
+        //else if (GameState == GameState.PlayerDied && Input.anyKeyDown)
+        //{
+        //    SetGameState(GameState.InGame);
+        //}
     }
     public static GameManager Instance
     {

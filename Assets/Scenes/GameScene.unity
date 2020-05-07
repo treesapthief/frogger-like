@@ -1457,7 +1457,6 @@ GameObject:
   - component: {fileID: 558048209}
   - component: {fileID: 558048208}
   - component: {fileID: 558048207}
-  - component: {fileID: 558048206}
   m_Layer: 0
   m_Name: LogMedium (2)
   m_TagString: Rideable
@@ -1465,19 +1464,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &558048206
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 558048205}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70eabefe80321e34f8fd1a2b6ea5d0e2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PlayerLandingOffset: 0.5
 --- !u!114 &558048207
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3319,7 +3305,6 @@ GameObject:
   - component: {fileID: 964026662}
   - component: {fileID: 964026661}
   - component: {fileID: 964026660}
-  - component: {fileID: 964026659}
   m_Layer: 0
   m_Name: LogLarge (2)
   m_TagString: Rideable
@@ -3327,19 +3312,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &964026659
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 964026658}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70eabefe80321e34f8fd1a2b6ea5d0e2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PlayerLandingOffset: 0.5
 --- !u!114 &964026660
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5652,7 +5624,6 @@ GameObject:
   - component: {fileID: 1460285785}
   - component: {fileID: 1460285784}
   - component: {fileID: 1460285786}
-  - component: {fileID: 1460285787}
   m_Layer: 0
   m_Name: LogMedium
   m_TagString: Rideable
@@ -5785,19 +5756,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Speed: 4
   StartingPosition: {fileID: 128847623}
---- !u!114 &1460285787
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1460285781}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70eabefe80321e34f8fd1a2b6ea5d0e2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PlayerLandingOffset: 0.5
 --- !u!1 &1593492860
 GameObject:
   m_ObjectHideFlags: 0
@@ -6292,7 +6250,6 @@ GameObject:
   - component: {fileID: 1837441912}
   - component: {fileID: 1837441911}
   - component: {fileID: 1837441910}
-  - component: {fileID: 1837441913}
   m_Layer: 0
   m_Name: LogLarge
   m_TagString: Rideable
@@ -6426,19 +6383,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 5.515625, y: 0.921875}
   m_EdgeRadius: 0
---- !u!114 &1837441913
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1837441907}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70eabefe80321e34f8fd1a2b6ea5d0e2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PlayerLandingOffset: 0.5
 --- !u!1 &1842617055
 GameObject:
   m_ObjectHideFlags: 0
@@ -7020,7 +6964,6 @@ GameObject:
   - component: {fileID: 1987276374}
   - component: {fileID: 1987276373}
   - component: {fileID: 1987276372}
-  - component: {fileID: 1987276371}
   m_Layer: 0
   m_Name: LogMedium (1)
   m_TagString: Rideable
@@ -7028,19 +6971,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1987276371
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1987276370}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70eabefe80321e34f8fd1a2b6ea5d0e2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PlayerLandingOffset: 0.5
 --- !u!114 &1987276372
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7836,8 +7766,8 @@ GameObject:
   - component: {fileID: 2104181675}
   - component: {fileID: 2104181676}
   - component: {fileID: 2104181678}
-  - component: {fileID: 2104181677}
   - component: {fileID: 2104181679}
+  - component: {fileID: 2104181677}
   m_Layer: 10
   m_Name: Player
   m_TagString: Player

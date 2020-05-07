@@ -39,5 +39,6 @@ public class PlayerDrownable : MonoBehaviour
         
         yield return new WaitForSeconds(3);
         GetComponent<PlayerMovement>().ResetPosition();
+        GameManager.Instance.SetGameState(GameState.InGame);
     }
 }

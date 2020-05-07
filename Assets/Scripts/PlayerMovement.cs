@@ -21,6 +21,16 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        MovePlayer();
+    }
+
+    private void MovePlayer()
+    {
+        if (GameManager.Instance.GameState != GameState.InGame)
+        {
+            return;
+        }
+
         if (Input.GetKeyDown(KeyCode.W))
         {
             transform.position = new Vector3(transform.position.x, transform.position.y + 1, 0);
