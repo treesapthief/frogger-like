@@ -31,12 +31,13 @@ public class PlayerRideable : MonoBehaviour
     {
         if (GameManager.Instance.GameState != GameState.InGame)
         {
+            Debug.Log($"Ignore ride-able, state is {GameManager.Instance.GameState}");
             return;
         }
 
         if (platform.gameObject.tag == "Rideable" && gameObject.transform.parent == null)
         {
-            Debug.Log("Player landed on ride-able object");
+            Debug.Log($"Player landed on {platform.name}");
             var playerRigidBody = GetComponent<Rigidbody2D>();
             var parentRigidBody = platform.gameObject.GetComponent<Rigidbody2D>();
 
@@ -47,7 +48,7 @@ public class PlayerRideable : MonoBehaviour
             var length = platform.bounds.size.x;
             if (spot > length)
             {
-                Debug.Log("Frog is no longer on the Rideable");
+                Debug.Log($"Frog is no longer on {platform.name}");
                 // Any farther, the frog is in the water
                 return;
             }
@@ -55,7 +56,7 @@ public class PlayerRideable : MonoBehaviour
             playerRigidBody.velocity = parentRigidBody.velocity;
             gameObject.transform.position = new Vector3(platformPosition.x + spot, platformPosition.y, 0);
             gameObject.transform.parent = platform.transform;
-            Debug.Log("Set player onto the Rideable");
+            Debug.Log($"Set player on {platform.name}");
         }
     }
 
@@ -68,7 +69,7 @@ public class PlayerRideable : MonoBehaviour
 
         if (platform.gameObject.tag == "Rideable" && gameObject.transform.parent != null)
         {
-            Debug.Log("Player left ride-able object");
+            Debug.Log($"Player left {platform.name}");
             gameObject.transform.parent = null;
             var playerRigidBody = GetComponent<Rigidbody2D>();
             playerRigidBody.velocity = Vector3.zero;
