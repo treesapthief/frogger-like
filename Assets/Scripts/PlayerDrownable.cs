@@ -6,7 +6,7 @@ public class PlayerDrownable : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        GameManager.Instance.OnStateChange += OnPlayerDied;
+        //GameManager.Instance.OnStateChange += OnPlayerDied;
     }
 
     // Update is called once per frame
@@ -17,11 +17,11 @@ public class PlayerDrownable : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Water" && transform.parent == null)
-        {
-            Debug.Log("Player hit water");
-            GameManager.Instance.SetGameState(GameState.PlayerDied);
-        }
+        //if (collision.gameObject.tag == "Water" && transform.parent == null)
+        //{
+        //    Debug.Log("Player hit water");
+        //    GameManager.Instance.SetGameState(GameState.PlayerDied);
+        //}
     }
 
     private void OnPlayerDied(GameState newState)

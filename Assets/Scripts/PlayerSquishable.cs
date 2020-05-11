@@ -18,10 +18,10 @@ public class PlayerSquishable : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.tag == "Squishable")
-        {
-            Debug.Log("Squished player");
-            GameManager.Instance.SetGameState(GameState.PlayerDied);
-        }
+        //if (other.gameObject.tag == "Squishable")
+        //{
+        //    Debug.Log("Squished player");
+        //    GameManager.Instance.SetGameState(GameState.PlayerDied);
+        //}
     }
 }
