@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class CollectibleItem : MonoBehaviour
 {
@@ -18,10 +16,17 @@ public class CollectibleItem : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
+        if (other.gameObject.tag != "Player")
+        {
+            return;
+        }
+
         Debug.Log("Collectible item triggered");
         if (other.gameObject.TryGetComponent<PlayerMovement>(out var player))
         {
+            GameManager.Instance.CollectItem();
             player.ResetPosition();
+            Destroy(gameObject);
         }
     }
 }

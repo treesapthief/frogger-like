@@ -15,7 +15,6 @@ public class PlayerMovement : MonoBehaviour
 
     void Start()
     {
-        
     }
 
     // Update is called once per frame
@@ -60,5 +59,9 @@ public class PlayerMovement : MonoBehaviour
     public void ResetPosition()
     {
         transform.position = PlayerStartingPosition.position;
+        var rigidBody2d = GetComponent<Rigidbody2D>();
+        rigidBody2d.velocity = Vector3.zero;
+        transform.parent = null;
+        FacingDirection = FacingDirection.North;
     }
 }

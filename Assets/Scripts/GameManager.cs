@@ -17,6 +17,7 @@ public class GameManager : MonoBehaviour
 {
     public event OnStateChangeHandler OnStateChange;
     public GameState GameState { get; private set; }
+    private int _collectibleItem;
 
     private static GameManager _instance = null;
 
@@ -32,33 +33,38 @@ public class GameManager : MonoBehaviour
         OnStateChange?.Invoke(state);
     }
 
-    // Start is called before the first frame update
-    void Start()
+    public void CollectItem()
     {
+        _collectibleItem--;
+        if (_collectibleItem <= 0)
+        {
+            _collectibleItem = 0;
+            SetGameState(GameState.LevelComplete);
+        }
+    }
+
+    public void RestartLevel()
+    {
+        BuildCollectibleCount();
         SetGameState(GameState.InGame);
     }
 
-    // Update is called once per frame
-    void Update()
+    private void BuildCollectibleCount()
     {
-        //if (GameState == GameState.GameOver && Input.anyKeyDown)
-        //{
-        //    SetGameState(GameState.InGame);
-        //}
-        //else if (GameState == GameState.PlayerDied && Input.anyKeyDown)
-        //{
-        //    SetGameState(GameState.InGame);
-        //}
+        var collectibleItems = GameObject.FindGameObjectsWithTag("Collectible");
+        _collectibleItem = collectibleItems.Length;
     }
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        RestartLevel();
+    }
+
     public static GameManager Instance
     {
         get
         {
-            //if (_instance == null)
-            //{
-            //    _instance = new GameManager();
-            //}
-
             return _instance;
         }
     }
