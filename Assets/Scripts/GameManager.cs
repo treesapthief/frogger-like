@@ -17,6 +17,9 @@ public class GameManager : MonoBehaviour
 {
     public event OnStateChangeHandler OnStateChange;
     public GameState GameState { get; private set; }
+    public int Score = 0;
+    public int HiScore = 0;
+    public int Level = 1;
     private int _collectibleItem;
 
     private static GameManager _instance = null;
@@ -47,6 +50,7 @@ public class GameManager : MonoBehaviour
     {
         BuildCollectibleCount();
         SetGameState(GameState.InGame);
+        // TODO: Should I set score here?
     }
 
     private void BuildCollectibleCount()
