@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 public enum GameState
 {
@@ -16,11 +17,16 @@ public delegate void OnStateChangeHandler(GameState newState);
 public class GameManager : MonoBehaviour
 {
     public event OnStateChangeHandler OnStateChange;
+    public event Action<int> OnScoreChange;
+    public event Action<int> OnHighScoreChange;
     public GameState GameState { get; private set; }
-    public int Score = 0;
-    public int HiScore = 0;
-    public int Level = 1;
-    private int _collectibleItem;
+    public int BaseCollectibleScore = 100;
+
+    private int _totalCollectibleItems;
+    private int _itemsCollected;
+    private int _score;
+    private int _highScore;
+    private int _level = 0;
 
     private static GameManager _instance = null;
 
@@ -38,10 +44,14 @@ public class GameManager : MonoBehaviour
 
     public void CollectItem()
     {
-        _collectibleItem--;
-        if (_collectibleItem <= 0)
+        _itemsCollected++;
+
+        var scoreGiven = BaseCollectibleScore * (int)Math.Pow(2, _level);
+        GiveScore(scoreGiven);
+
+        if (_itemsCollected >= _totalCollectibleItems )
         {
-            _collectibleItem = 0;
+            _itemsCollected = _totalCollectibleItems;
             SetGameState(GameState.LevelComplete);
         }
     }
@@ -50,13 +60,36 @@ public class GameManager : MonoBehaviour
     {
         BuildCollectibleCount();
         SetGameState(GameState.InGame);
-        // TODO: Should I set score here?
+        SetScore(0);
     }
+
+    public void GiveScore(int score)
+    {
+        SetScore(_score + score);
+    }
+
+    private void SetScore(int score)
+    {
+        _score = score;
+        OnScoreChange?.Invoke(score);
+
+        // TODO: Move this to when the player completes a level, or a game over is reached
+        // TODO: High Score only should change when the player is done playing
+        // TODO: (and then set it in Player Prefs)
+        if (_score > _highScore)
+        {
+            _highScore = _score;
+            OnHighScoreChange?.Invoke(_highScore);
+        }
+    }
+
+
 
     private void BuildCollectibleCount()
     {
         var collectibleItems = GameObject.FindGameObjectsWithTag("Collectible");
-        _collectibleItem = collectibleItems.Length;
+        _itemsCollected = 0;
+        _totalCollectibleItems = collectibleItems.Length;
     }
 
     // Start is called before the first frame update
