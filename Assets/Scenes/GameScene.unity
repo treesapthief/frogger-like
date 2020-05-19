@@ -1513,6 +1513,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d3120822a4f31b4784fbbcd164a68e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BaseCollectibleScore: 100
 --- !u!4 &464817324
 Transform:
   m_ObjectHideFlags: 0
@@ -2131,6 +2132,7 @@ GameObject:
   - component: {fileID: 643952520}
   - component: {fileID: 643952519}
   - component: {fileID: 643952518}
+  - component: {fileID: 643952521}
   m_Layer: 0
   m_Name: TurtlePair
   m_TagString: Rideable
@@ -2216,6 +2218,20 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &643952521
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 643952516}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66b2839d676caa543b4548f93bed29b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TimeBetweenDives: 3
+  GracePeriodBetweenDivingFrames: 0.5
 --- !u!1 &667572532
 GameObject:
   m_ObjectHideFlags: 0
