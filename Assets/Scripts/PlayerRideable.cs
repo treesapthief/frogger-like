@@ -31,7 +31,6 @@ public class PlayerRideable : MonoBehaviour
     {
         if (GameManager.Instance.GameState != GameState.InGame)
         {
-            Debug.Log($"Ignore ride-able, state is {GameManager.Instance.GameState}");
             return;
         }
 
