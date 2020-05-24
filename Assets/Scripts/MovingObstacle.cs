@@ -16,7 +16,7 @@ public class MovingObstacle : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        _rigidBody2D.velocity = (RightToLeft ? Vector3.left : Vector3.right) * Speed;
+        _rigidBody2D.velocity = (RightToLeft ? Vector3.left : Vector3.right) * Speed * GameManager.Instance.GetLevelMultiplier();
     }
 
     public void ResetPosition()

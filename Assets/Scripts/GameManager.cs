@@ -21,12 +21,15 @@ public class GameManager : MonoBehaviour
     public event Action<int> OnHighScoreChange;
     public GameState GameState { get; private set; }
     public int BaseCollectibleScore = 100;
+    public float LevelMultiplierWeight = 1.1f;
 
     private int _totalCollectibleItems;
     private int _itemsCollected;
     private int _score;
     private int _highScore;
     private int _level = 0;
+
+    private const string PrefHighScoreKey = "Player_HighScore";
 
     private static GameManager _instance = null;
 
@@ -52,15 +55,29 @@ public class GameManager : MonoBehaviour
         if (_itemsCollected >= _totalCollectibleItems )
         {
             _itemsCollected = _totalCollectibleItems;
-            SetGameState(GameState.LevelComplete);
+            CompleteLevel();
+            
         }
     }
 
     public void RestartLevel()
     {
+        BuildLevel();
+        SetScore(0);
+    }
+
+    private void BuildLevel()
+    {
         BuildCollectibleCount();
         SetGameState(GameState.InGame);
-        SetScore(0);
+    }
+
+    private void CompleteLevel()
+    {
+        SetGameState(GameState.LevelComplete);
+        _level++;
+        BuildLevel();
+        SaveHighScore();
     }
 
     public void GiveScore(int score)
@@ -79,10 +96,16 @@ public class GameManager : MonoBehaviour
         if (_score > _highScore)
         {
             _highScore = _score;
+            SaveHighScore();
             OnHighScoreChange?.Invoke(_highScore);
         }
     }
 
+    private void SaveHighScore()
+    {
+        PlayerPrefs.SetInt(PrefHighScoreKey, _highScore);
+        OnHighScoreChange?.Invoke(_highScore);
+    }
 
 
     private void BuildCollectibleCount()
@@ -90,6 +113,11 @@ public class GameManager : MonoBehaviour
         var collectibleItems = GameObject.FindGameObjectsWithTag("Collectible");
         _itemsCollected = 0;
         _totalCollectibleItems = collectibleItems.Length;
+    }
+
+    public float GetLevelMultiplier()
+    {
+        return _level * LevelMultiplierWeight;
     }
 
     // Start is called before the first frame update
