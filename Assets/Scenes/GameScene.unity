@@ -1514,6 +1514,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BaseCollectibleScore: 100
+  LevelMultiplierWeight: 1.1
 --- !u!4 &464817324
 Transform:
   m_ObjectHideFlags: 0
@@ -8468,6 +8469,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1987731572}
   - component: {fileID: 1987731573}
+  - component: {fileID: 1987731574}
+  - component: {fileID: 1987731575}
   m_Layer: 0
   m_Name: Turtle2
   m_TagString: Untagged
@@ -8540,6 +8543,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1987731574
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1987731571}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0438b14d6fdc85b478f651785cf458d5, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1987731575
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1987731571}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba00ad33302084abb87b8f8ef9bdac9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2032808235
 GameObject:
   m_ObjectHideFlags: 0
@@ -8890,6 +8924,7 @@ GameObject:
   - component: {fileID: 2064266068}
   - component: {fileID: 2064266069}
   - component: {fileID: 2064266070}
+  - component: {fileID: 2064266071}
   m_Layer: 0
   m_Name: Turtle1
   m_TagString: Untagged
@@ -8981,6 +9016,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &2064266071
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2064266067}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba00ad33302084abb87b8f8ef9bdac9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2071023710
 GameObject:
   m_ObjectHideFlags: 0
