@@ -13,32 +13,33 @@ public class TurtleDive : MonoBehaviour
     /// <param name="isDiving"></param>
     private void ToggleDive(bool isDiving)
     {
+        Debug.Log($"ToggleDive(isDiving: {isDiving}");
         foreach (Transform child in transform)
         {
             var obj = child.gameObject;
             var animator = obj.GetComponent<Animator>();
-            animator.SetBool("isDiving", isDiving);
+            animator.SetBool("IsDiving", isDiving);
         }
 
         // Start timer
-        if (isDiving)
-        {
+      //  if (isDiving)
+      //  {
             _timeSinceLastDive = TimeBetweenDives;
-        }
+      //  }
 
         _isUnderwater = isDiving;
     }
 
     private void Update()
     {
-        if (_isUnderwater)
-        {
+       // if (_isUnderwater)
+       // {
             _timeSinceLastDive -= Time.deltaTime;
 
             if (_timeSinceLastDive <= 0)
             {
-                ToggleDive(false);
+                ToggleDive(!_isUnderwater);
             }
-        }
+      //  }
     }
 }
