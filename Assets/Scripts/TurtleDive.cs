@@ -15,6 +15,11 @@ public class TurtleDive : MonoBehaviour
     private float _timeSinceLastDive = 0;
     private DiveState _diveState = DiveState.Above;
 
+    public void SetDiveState(DiveState diveState)
+    {
+        _diveState = diveState;
+    }
+
     /// <summary>
     /// Start the turtles diving under water
     /// </summary>

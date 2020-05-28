@@ -27,7 +27,7 @@ public class GameManager : MonoBehaviour
     private int _itemsCollected;
     private int _score;
     private int _highScore;
-    private int _level = 0;
+    private int _level = 1;
 
     private const string PrefHighScoreKey = "Player_HighScore";
 
@@ -49,7 +49,7 @@ public class GameManager : MonoBehaviour
     {
         _itemsCollected++;
 
-        var scoreGiven = BaseCollectibleScore * (int)Math.Pow(2, _level);
+        var scoreGiven = BaseCollectibleScore * (int)Math.Pow(2, _level-1);
         GiveScore(scoreGiven);
 
         if (_itemsCollected >= _totalCollectibleItems )
