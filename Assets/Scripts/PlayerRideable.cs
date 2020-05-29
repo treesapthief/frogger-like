@@ -34,7 +34,7 @@ public class PlayerRideable : MonoBehaviour
             return;
         }
 
-        if (platform.gameObject.tag == "Rideable" && gameObject.transform.parent == null)
+        if (platform.gameObject.tag == "Rideable" && platform.gameObject.GetComponent<TurtleDive>().IsPlayerCollidable() && gameObject.transform.parent == null)
         {
             Debug.Log($"Player landed on {platform.name}");
             var playerRigidBody = GetComponent<Rigidbody2D>();

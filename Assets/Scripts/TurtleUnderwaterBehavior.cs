@@ -12,9 +12,9 @@ public class TurtleUnderwaterBehavior : MonoBehaviour
     {
         Debug.Log($"ToggleCollision (value: {value})");
         var obj = transform.parent.gameObject;
-        var collider = obj.GetComponent<BoxCollider2D>();
+        //var collider = obj.GetComponent<BoxCollider2D>();
         var diveState = ((DiveState) value);
-        collider.enabled = diveState != DiveState.Underwater;
+        //collider.enabled = diveState != DiveState.Underwater;
 
         var animator = GetComponent<Animator>();
         animator.SetInteger("DiveState", value); // This state should be 0 or 2 only

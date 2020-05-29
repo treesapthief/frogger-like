@@ -12,12 +12,18 @@ public class TurtleDive : MonoBehaviour
 {
     public float TimeBetweenDives = 3f;
     public float GracePeriodBetweenDivingFrames = 0.5f;
+
     private float _timeSinceLastDive = 0;
     private DiveState _diveState = DiveState.Above;
 
     public void SetDiveState(DiveState diveState)
     {
         _diveState = diveState;
+    }
+
+    public bool IsPlayerCollidable()
+    {
+        return _diveState != DiveState.Underwater;
     }
 
     /// <summary>
