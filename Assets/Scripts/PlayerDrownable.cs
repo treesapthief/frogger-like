@@ -16,13 +16,18 @@ public class PlayerDrownable : MonoBehaviour
         
     }
 
+    public void WaterContactTrigger()
+    {
+        StartCoroutine(CheckWaterContact());
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (GameManager.Instance.GameState == GameState.InGame
             && transform.parent == null
             && collision.gameObject.tag == "Water")
         {
-            StartCoroutine(CheckWaterContact());
+            WaterContactTrigger();
         }
     }
 

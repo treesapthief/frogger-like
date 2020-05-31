@@ -33,10 +33,21 @@ public class TurtleDive : MonoBehaviour
     private void ToggleDive(bool isDiving)
     {
         _diveState = isDiving ? DiveState.Diving : DiveState.Surfacing;
-        Debug.Log($"ToggleDive(isDiving: {isDiving}");
+        //Debug.Log($"ToggleDive(isDiving: {isDiving}");
         foreach (Transform child in transform)
         {
             var obj = child.gameObject;
+            if (obj.name == "Player")
+            {
+                // Kick player off turtle
+                Debug.Log("Kick player off turtle when it dives");
+                obj.gameObject.GetComponent<PlayerRideable>()?.RemovePlayerFromRideable();
+
+                // Player should check water collision again
+                obj.gameObject.GetComponent<PlayerDrownable>()?.WaterContactTrigger();
+                continue;
+            }
+
             var animator = obj.GetComponent<Animator>();
             animator.SetInteger("DiveState", (int)_diveState); // Should be 1 or 3
         }

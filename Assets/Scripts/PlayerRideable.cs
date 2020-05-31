@@ -34,7 +34,13 @@ public class PlayerRideable : MonoBehaviour
             return;
         }
 
-        if (platform.gameObject.tag == "Rideable" && platform.gameObject.GetComponent<TurtleDive>().IsPlayerCollidable() && gameObject.transform.parent == null)
+        var isRideable = platform.gameObject.tag == "Rideable";
+        var turtle = platform.gameObject.GetComponent<TurtleDive>();
+        var isPlayerCollidable = turtle == null || turtle.IsPlayerCollidable();
+        var isOnRideable = gameObject.transform.parent == null;
+        Debug.Log($"isRideable: {isRideable}, platform is turtle: {turtle != null} isPlayerCollidable: {isPlayerCollidable}, isOnRideable: {isOnRideable}");
+
+        if (isRideable && isPlayerCollidable && isOnRideable)
         {
             Debug.Log($"Player landed on {platform.name}");
             var playerRigidBody = GetComponent<Rigidbody2D>();
@@ -69,14 +75,19 @@ public class PlayerRideable : MonoBehaviour
         if (platform.gameObject.tag == "Rideable" && gameObject.transform.parent != null)
         {
             Debug.Log($"Player left {platform.name}");
-            gameObject.transform.parent = null;
-            var playerRigidBody = GetComponent<Rigidbody2D>();
-            playerRigidBody.velocity = Vector3.zero;
-
-            var playerPosition = gameObject.transform.position;
-            var newX = Mathf.Round(playerPosition.x - PlayerLandingOffset) + PlayerLandingOffset;
-
-            gameObject.transform.position = new Vector3(newX, playerPosition.y, 0);
+            RemovePlayerFromRideable();
         }
+    }
+
+    public void RemovePlayerFromRideable()
+    {
+        gameObject.transform.parent = null;
+        var playerRigidBody = GetComponent<Rigidbody2D>();
+        playerRigidBody.velocity = Vector3.zero;
+
+        var playerPosition = gameObject.transform.position;
+        var newX = Mathf.Round(playerPosition.x - PlayerLandingOffset) + PlayerLandingOffset;
+
+        gameObject.transform.position = new Vector3(newX, playerPosition.y, 0);
     }
 }

@@ -7,14 +7,14 @@ public class PlayerDeathBehavior : MonoBehaviour
 
     public void SetPlayerDeath()
     {
-        Debug.Log("SetPlayerDeath");
+        //Debug.Log("SetPlayerDeath");
         var spriteRenderer = GetComponent<SpriteRenderer>();
         spriteRenderer.sprite = PlayerDeath;
     }
 
     public void SetPlayerAlive()
     {
-        Debug.Log("SetPlayerAlive");
+        //Debug.Log("SetPlayerAlive");
         var spriteRenderer = GetComponent<SpriteRenderer>();
         spriteRenderer.sprite = PlayerNormal;
     }

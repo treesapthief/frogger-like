@@ -40,7 +40,7 @@ public class GameManager : MonoBehaviour
 
     public void SetGameState(GameState state)
     {
-        Debug.Log($"GameState changed: {state}");
+        //Debug.Log($"GameState changed: {state}");
         GameState = state;
         OnStateChange?.Invoke(state);
     }
